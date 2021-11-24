@@ -1,2 +1,3 @@
-**/stdout/loop
+cmd/stdout/loop/loop
+cmd/stdout/recursive/recursive
 **/traces.json
