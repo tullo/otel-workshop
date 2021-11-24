@@ -3,14 +3,14 @@ module github.com/tullo/otel-workshop/cmd/lslauncher
 go 1.17
 
 replace (
-	github.com/tullo/otel-workshop/web/fib => /home/anda/code/otel/workshop/web/fib
+	//github.com/tullo/otel-workshop/web/fib => /home/anda/code/otel/workshop/web/fib
 	go.opentelemetry.io/otel/internal/metric v0.25.0 => go.opentelemetry.io/otel/internal/metric v0.23.0
 	go.opentelemetry.io/otel/metric v0.25.0 => go.opentelemetry.io/otel/metric v0.23.0
 )
 
 require (
 	github.com/lightstep/otel-launcher-go v1.0.0
-	github.com/tullo/otel-workshop/web/fib v0.0.0-00010101000000-000000000000
+	github.com/tullo/otel-workshop/web/fib v0.0.0-20211124221546-d9c4e5439f5e
 )
 
 require (

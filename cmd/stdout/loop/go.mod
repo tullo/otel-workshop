@@ -2,10 +2,10 @@ module github.com/tullo/otel-workshop/cmd/stdout/loop
 
 go 1.17
 
-replace github.com/tullo/otel-workshop/loop/fib => /home/anda/code/otel/workshop/loop/fib
+//replace github.com/tullo/otel-workshop/loop/fib => /home/anda/code/otel/workshop/loop/fib
 
 require (
-	github.com/tullo/otel-workshop/loop/fib v0.0.0-00010101000000-000000000000
+	github.com/tullo/otel-workshop/loop/fib v0.0.0-20211124221546-d9c4e5439f5e
 	go.opentelemetry.io/otel v1.2.0
 	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.2.0
 	go.opentelemetry.io/otel/sdk v1.2.0
