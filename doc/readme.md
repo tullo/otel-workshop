@@ -21,6 +21,8 @@ can be reconﬁgured without changing instrumented code.
   - Run them as agents or in standalone mode.
     - A Kubernetes operator exists to aid in deployment.
 
+![meterProvider](OT-collector.png)
+
 ## OT API
 - Tracer
   - Responsible for tracking the currently active span.
