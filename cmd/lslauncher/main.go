@@ -5,9 +5,14 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"runtime"
+	"syscall"
+	"time"
 
 	"github.com/lightstep/otel-launcher-go/launcher"
 	"github.com/tullo/otel-workshop/web/fib"
+	"go.opentelemetry.io/otel/attribute"
+	metricglobal "go.opentelemetry.io/otel/metric/global"
 )
 
 func newLighstepLauncher() launcher.Launcher {
@@ -47,6 +52,10 @@ func main() {
 
 	errCh := make(chan error)
 
+	// Start metrics collection.
+	go collectMetrics(context.Background())
+
+	// Start web server.
 	s := fib.NewServer(os.Stdin, l)
 	go func() {
 		errCh <- s.Serve(context.Background())
@@ -60,5 +69,48 @@ func main() {
 		if err != nil {
 			l.Fatal(err)
 		}
+	}
+}
+
+func collectMetrics(ctx context.Context) {
+	// Set attributes for all metrics
+	appKey := attribute.Key("fib")
+	containerKey := attribute.Key(os.Getenv("HOSTNAME"))
+
+	// 1. Declare a meter.
+	meter := metricglobal.Meter("container")
+
+	// 2. Declare specific metrics to collect
+	mem, _ := meter.NewInt64Counter("mem_usage")             // metric.WithDescription("Amount of memory used."),
+	disc, _ := meter.NewFloat64Counter("disk_usage")         // metric.WithDescription("Amount of disk used."),
+	quota, _ := meter.NewFloat64Counter("disk_quota")        // metric.WithDescription("Amount of disk quota available."),
+	goroutines, _ := meter.NewInt64Counter("num_goroutines") // metric.WithDescription("Amount of goroutines running."),
+
+	// 3. Fetch runtime measurements that application makes available.
+	var ms runtime.MemStats
+	for {
+		// Read memory allocator statistics.
+		runtime.ReadMemStats(&ms)
+
+		// Syscall to gather file system statistics
+		// for the current directory.
+		var fs syscall.Statfs_t
+		wd, _ := os.Getwd()
+		syscall.Statfs(wd, &fs)
+		all := float64(fs.Blocks) * float64(fs.Bsize)
+		free := float64(fs.Bfree) * float64(fs.Bsize)
+
+		// Assign observed metric values to our declared meters.
+		meter.RecordBatch(ctx, []attribute.KeyValue{
+			appKey.String(os.Getenv("PROJECT_DOMAIN")), // TODO project id?
+			containerKey.String(os.Getenv("HOSTNAME"))},
+			disc.Measurement(all-free),
+			quota.Measurement(all),
+			mem.Measurement(int64(ms.Sys)),
+			goroutines.Measurement(int64(runtime.NumGoroutine())),
+		)
+
+		// Take measurements once per minute.
+		time.Sleep(time.Minute)
 	}
 }

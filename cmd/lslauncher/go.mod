@@ -11,6 +11,8 @@ replace (
 require (
 	github.com/lightstep/otel-launcher-go v1.0.0
 	github.com/tullo/otel-workshop/web/fib v0.0.0-20211124221546-d9c4e5439f5e
+	go.opentelemetry.io/otel v1.2.0
+	go.opentelemetry.io/otel/metric v0.25.0
 )
 
 require (
@@ -33,13 +35,11 @@ require (
 	go.opentelemetry.io/contrib/instrumentation/runtime v0.23.0 // indirect
 	go.opentelemetry.io/contrib/propagators/b3 v0.23.0 // indirect
 	go.opentelemetry.io/contrib/propagators/ot v0.23.0 // indirect
-	go.opentelemetry.io/otel v1.2.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric v0.23.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v0.23.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.0.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.0.0 // indirect
 	go.opentelemetry.io/otel/internal/metric v0.25.0 // indirect
-	go.opentelemetry.io/otel/metric v0.25.0 // indirect
 	go.opentelemetry.io/otel/sdk v1.2.0 // indirect
 	go.opentelemetry.io/otel/sdk/export/metric v0.23.0 // indirect
 	go.opentelemetry.io/otel/sdk/metric v0.23.0 // indirect
