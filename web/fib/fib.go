@@ -41,7 +41,7 @@ func (s *Server) Serve(ctx context.Context) error {
 
 	mux := http.NewServeMux()
 
-	// WithPublicEndpoint() option marks handlers as a trace boundary
+	// WithPublicEndpoint() option marks handlers as a trace boundary.
 	mux.Handle("/", otelhttp.NewHandler(otelhttp.WithRouteTag("/", http.HandlerFunc(rootHandler)), "root", otelhttp.WithPublicEndpoint()))
 	mux.Handle("/favicon.ico", http.NotFoundHandler())
 	mux.Handle("/fib", otelhttp.NewHandler(otelhttp.WithRouteTag("/fib", http.HandlerFunc(fibHandler)), "fibonacci", otelhttp.WithPublicEndpoint()))
@@ -150,6 +150,7 @@ func fibHandler(w http.ResponseWriter, r *http.Request) {
 
 		res, err := cleanhttp.DefaultClient().Do(req)
 		if err != nil {
+			sp.SetStatus(codes.Error, "failure sending HTTP request")
 			sp.RecordError(err)
 			errCh <- err
 			return
@@ -158,6 +159,7 @@ func fibHandler(w http.ResponseWriter, r *http.Request) {
 		body, err := io.ReadAll(res.Body)
 		if err != nil {
 			res.Body.Close()
+			sp.SetStatus(codes.Error, err.Error())
 			sp.RecordError(err)
 			errCh <- err
 			return
@@ -166,7 +168,7 @@ func fibHandler(w http.ResponseWriter, r *http.Request) {
 		fib, err := strconv.Atoi(string(body))
 		if err != nil {
 			sp.RecordError(err)
-			sp.SetStatus(codes.Error, "failure parsing")
+			sp.SetStatus(codes.Error, "failure parsing result")
 			errCh <- err
 			return
 		}
@@ -196,6 +198,7 @@ func fibHandler(w http.ResponseWriter, r *http.Request) {
 
 		res, err := cleanhttp.DefaultClient().Do(req)
 		if err != nil {
+			sp.SetStatus(codes.Error, "failure sending HTTP request")
 			sp.RecordError(err)
 			errCh <- err
 			return
@@ -204,6 +207,7 @@ func fibHandler(w http.ResponseWriter, r *http.Request) {
 		body, err := io.ReadAll(res.Body)
 		if err != nil {
 			res.Body.Close()
+			sp.SetStatus(codes.Error, err.Error())
 			sp.RecordError(err)
 			errCh <- err
 			return
@@ -213,7 +217,7 @@ func fibHandler(w http.ResponseWriter, r *http.Request) {
 		fib, err := strconv.Atoi(string(body))
 		if err != nil {
 			sp.RecordError(err)
-			sp.SetStatus(codes.Error, "failure parsing")
+			sp.SetStatus(codes.Error, "failure parsing result")
 			errCh <- err
 			return
 		}
