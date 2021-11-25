@@ -14,7 +14,7 @@ func newResource() *resource.Resource {
 			sc.SchemaURL,
 			sc.ServiceNameKey.String("fib"),
 			sc.ServiceVersionKey.String("v0.1.0"),
-			attribute.String("environment", "demo"),
+			attribute.String("environment", "workshop"),
 		),
 	)
 
