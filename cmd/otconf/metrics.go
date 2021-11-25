@@ -25,15 +25,14 @@ func setupMetrics(c Config, headerName string) (func() error, error) {
 
 	period := controller.DefaultPeriod
 	if c.MetricReportingPeriod != "" {
-		period, err = time.ParseDuration(c.MetricReportingPeriod)
-		if err != nil {
+		if period, err = time.ParseDuration(c.MetricReportingPeriod); err != nil {
 			return nil, fmt.Errorf("invalid metric reporting period: %v", err)
 		}
 		if period <= 0 {
-
 			return nil, fmt.Errorf("invalid metric reporting period: %v", c.MetricReportingPeriod)
 		}
 	}
+
 	pusher := controller.New(
 		processor.New(
 			selector.NewWithInexpensiveDistribution(),
