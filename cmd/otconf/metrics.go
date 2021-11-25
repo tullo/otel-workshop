@@ -37,9 +37,12 @@ func setupMetrics(c Config, headerName string) (func() error, error) {
 		}
 	}
 
+	// Controller conﬁgures the export settings (push model).
 	pusher := controller.New(
 		processor.New(
-			selector.NewWithInexpensiveDistribution(),
+			//selector.NewWithExactDistribution(),     // uses more memory
+			//selector.NewWithHistogramDistribution(), // good default choice for most metric exporters
+			selector.NewWithInexpensiveDistribution(), // faster and uses less memory
 			metricExporter,
 		),
 		controller.WithExporter(metricExporter),
@@ -47,21 +50,27 @@ func setupMetrics(c Config, headerName string) (func() error, error) {
 		controller.WithCollectPeriod(period),
 	)
 
+	// Start the controller to begin pushing our metrics.
 	if err = pusher.Start(context.Background()); err != nil {
 		return nil, fmt.Errorf("failed to start controller: %v", err)
 	}
 
 	provider := pusher.MeterProvider()
 
+	// Start reporting of runtime metrics.
 	if err = runtimeMetrics.Start(runtimeMetrics.WithMeterProvider(provider)); err != nil {
 		return nil, fmt.Errorf("failed to start runtime metrics: %v", err)
 	}
 
+	// Start reporting of host metrics.
 	if err = hostMetrics.Start(hostMetrics.WithMeterProvider(provider)); err != nil {
 		return nil, fmt.Errorf("failed to start host metrics: %v", err)
 	}
 
+	// Register global meter provider.
 	metricglobal.SetMeterProvider(provider)
+
+	// Shutdown closure function.
 	return func() error {
 		_ = pusher.Stop(context.Background())
 		return metricExporter.Shutdown(context.Background())
