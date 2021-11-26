@@ -5,4 +5,4 @@
 # env $(cat .env  | xargs) | grep LS_
 # env $(cat .env) | grep LS_
 go build
-env $(cat .env) ./otconf
+env $(cat .env | grep -v '^#') ./otconf

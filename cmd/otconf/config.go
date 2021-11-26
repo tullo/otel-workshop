@@ -41,15 +41,17 @@ func WithLogger(logger Logger) Option {
 type Config struct {
 	SpanExporterEndpoint           string   `env:"OTEL_EXPORTER_OTLP_SPAN_ENDPOINT,default=ingest.lightstep.com:443"`
 	SpanExporterEndpointInsecure   bool     `env:"OTEL_EXPORTER_OTLP_SPAN_INSECURE,default=false"`
-	ServiceName                    string   `env:"LS_SERVICE_NAME"`
-	ServiceVersion                 string   `env:"LS_SERVICE_VERSION,default=unknown"`
 	MetricExporterEndpoint         string   `env:"OTEL_EXPORTER_OTLP_METRIC_ENDPOINT,default=ingest.lightstep.com:443"`
 	MetricExporterEndpointInsecure bool     `env:"OTEL_EXPORTER_OTLP_METRIC_INSECURE,default=false"`
-	MetricsEnabled                 bool     `env:"LS_METRICS_ENABLED,default=true"`
-	AccessToken                    string   `env:"LS_ACCESS_TOKEN"`
+	MetricReportingPeriod          string   `env:"OTEL_EXPORTER_OTLP_METRIC_PERIOD,default=30s"`
 	LogLevel                       string   `env:"OTEL_LOG_LEVEL,default=info"`
 	Propagators                    []string `env:"OTEL_PROPAGATORS,default=b3"`
-	MetricReportingPeriod          string   `env:"OTEL_EXPORTER_OTLP_METRIC_PERIOD,default=30s"`
+	TracesSampler                  string   `env:"OTEL_TRACES_SAMPLER,default=traceidratio"`
+	TracesSamplerArg               float64  `env:"OTEL_TRACES_SAMPLER_ARG,default=0.01"`
+	AccessToken                    string   `env:"LS_ACCESS_TOKEN"`
+	MetricsEnabled                 bool     `env:"LS_METRICS_ENABLED,default=true"`
+	ServiceName                    string   `env:"LS_SERVICE_NAME"`
+	ServiceVersion                 string   `env:"LS_SERVICE_VERSION,default=unknown"`
 	resourceAttributes             map[string]string
 	Resource                       *resource.Resource
 	logger                         Logger

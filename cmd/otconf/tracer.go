@@ -20,7 +20,7 @@ func setupTracing(c Config, headerName string) (func() error, error) {
 
 	bsp := trace.NewBatchSpanProcessor(spanExporter)
 	tp := trace.NewTracerProvider(
-		trace.WithSampler(trace.AlwaysSample()),
+		trace.WithSampler(sampler(c)),
 		trace.WithSpanProcessor(bsp),
 		trace.WithResource(c.Resource),
 	)
@@ -37,4 +37,24 @@ func setupTracing(c Config, headerName string) (func() error, error) {
 		_ = bsp.Shutdown(context.Background())
 		return spanExporter.Shutdown(context.Background())
 	}, nil
+}
+
+func sampler(c Config) trace.Sampler {
+	var s trace.Sampler
+	switch c.TracesSampler {
+	case "always_on", "jaeger_remote", "xray":
+		s = trace.AlwaysSample()
+	case "always_off":
+		s = trace.NeverSample()
+	case "traceidratio",
+		"parentbased_traceidratio":
+		s = trace.TraceIDRatioBased(c.TracesSamplerArg)
+	case "parentbased_always_on",
+		"parentbased_always_off":
+		//s = trace.ParentBased(nil)
+	default:
+		s = trace.NeverSample()
+	}
+
+	return s
 }
