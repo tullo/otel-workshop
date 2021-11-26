@@ -843,8 +843,8 @@ github.com/tklauser/numcpus v0.2.2 h1:oyhllyrScuYI6g+h/zUvNXNp1wy7x8qQy3t/piefld
 github.com/tklauser/numcpus v0.2.2/go.mod h1:x3qojaO3uyYt0i56EW/VUYs7uBvdl2fkfZFu0T9wgjM=
 github.com/tmc/grpc-websocket-proxy v0.0.0-20170815181823-89b8d40f7ca8/go.mod h1:ncp9v5uamzpCO7NfCPTXjqaC+bZgJeR0sMTm6dMHP7U=
 github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5/go.mod h1:ncp9v5uamzpCO7NfCPTXjqaC+bZgJeR0sMTm6dMHP7U=
-github.com/tullo/otel-workshop/web/fib v0.0.0-20211124224815-85c39ec8e6f8 h1:9NVxtgwC8IE6Gd+ZOHKFQSkkrQYmHmyqr1FWcfaZKuI=
-github.com/tullo/otel-workshop/web/fib v0.0.0-20211124224815-85c39ec8e6f8/go.mod h1:gVR3Iy2Z00fIqgGUKJGenRlbqqD2X4/zu4yuQER3ThM=
+github.com/tullo/otel-workshop/web/fib v0.0.0-20211125223905-d84350acb4a2 h1:fh/elYiHvpFWe28YX97SHGAAf6WzhzVcpkU1/uF49js=
+github.com/tullo/otel-workshop/web/fib v0.0.0-20211125223905-d84350acb4a2/go.mod h1:gVR3Iy2Z00fIqgGUKJGenRlbqqD2X4/zu4yuQER3ThM=
 github.com/uber/jaeger-client-go v2.25.0+incompatible/go.mod h1:WVhlPFC8FDjOFMMWRy2pZqQJSXxYSwNYOkTr/Z6d3Kk=
 github.com/uber/jaeger-client-go v2.29.1+incompatible/go.mod h1:WVhlPFC8FDjOFMMWRy2pZqQJSXxYSwNYOkTr/Z6d3Kk=
 github.com/uber/jaeger-lib v2.4.0+incompatible/go.mod h1:ComeNDZlWwrWnDv8aPp0Ba6+uUTzImX/AauajbLI56U=
