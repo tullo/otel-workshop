@@ -3,5 +3,6 @@ cmd/otconf/otconf
 cmd/stdout/loop/loop
 cmd/stdout/recursive/recursive
 cmd/uptrace/uptrace
+cmd/uptrace/country-info/country-info
 **/traces.json
 **/.env
