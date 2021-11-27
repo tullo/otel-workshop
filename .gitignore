@@ -2,5 +2,6 @@ cmd/lslauncher/lslauncher
 cmd/otconf/otconf
 cmd/stdout/loop/loop
 cmd/stdout/recursive/recursive
+cmd/uptrace/uptrace
 **/traces.json
 **/.env
