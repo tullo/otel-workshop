@@ -84,3 +84,36 @@ it can be customized via `-j <address>` flag passed to HotROD, e.g.
 ```
 go run ./examples/hotrod/main.go all -j http://jaeger-ui:16686
 ```
+
+## SigNoz APM and hotrod
+
+### Start SigNoz:
+
+```sh
+multipass launch -n signoz
+multipass shell signoz
+git clone https://github.com/SigNoz/signoz.git
+cd signoz/deploy
+./install.sh
+# Terminate services and remove named volumes.
+sudo docker-compose -f docker/clickhouse-setup/docker-compose.yaml down -v
+# Uncomment 'hotrod' & 'load-hotrod' services in docker-compose.yaml.
+sudo docker-compose -f docker/clickhouse-setup/docker-compose.yaml up
+```
+
+### Start Hotrod:
+
+```sh
+export SIGNOZ_IP=$(multipass info signoz | grep IPv4 | awk '{print $2}')
+export JAEGER_ENDPOINT=http://SIGNOZ_IP:14268/api/traces
+cd /cmd/signoz/hotrod
+./run.sh
+```
+
+### Start requesting "Rides On Demand":
+
+- http://[::1]:8080/
+
+### SigNoz UI
+
+- http://SIGNOZ_IP:3000/application
