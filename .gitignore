@@ -2,6 +2,9 @@ cmd/lslauncher/lslauncher
 cmd/otconf/otconf
 cmd/stdout/loop/loop
 cmd/stdout/recursive/recursive
+cmd/signoz/bookstore/gin-bookstore
+cmd/signoz/bookstore/test.db
+cmd/signoz/hotrod/hotrod
 cmd/uptrace/uptrace
 cmd/uptrace/country-info/country-info
 **/traces.json
