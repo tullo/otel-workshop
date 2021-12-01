@@ -1,3 +1,4 @@
+cmd/aspecto/aspecto
 cmd/honeycomb/honeycomb
 cmd/lslauncher/lslauncher
 cmd/newrelic/newrelic
