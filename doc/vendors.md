@@ -10,9 +10,9 @@
 - Elastic
 - Grafana Labs
 - [Honeycomb](collectors/honeycomb.md)
-- [Lightstep](collectors/lightstep.md) Increase developer productivity
+- [Lightstep](collectors/lightstep.md) Increase developer productivity.
 - [LogicMonitor](collectors/logicmonitor.md)
-- New Relic
+- [New Relic](collectors/newrelic.md) Instrument once, analyze everything in one place.
 - Sentry Software
 - Splunk
 - Sumo Logic
