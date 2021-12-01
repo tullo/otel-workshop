@@ -10,7 +10,7 @@
 - Elastic
 - Grafana Labs
 - [Honeycomb](collectors/honeycomb.md)
-- Lightstep
+- [Lightstep](collectors/lightstep.md) Increase developer productivity
 - [LogicMonitor](collectors/logicmonitor.md)
 - New Relic
 - Sentry Software
