@@ -13,7 +13,8 @@
 - [Lightstep](collectors/lightstep.md) Increase developer productivity.
 - [LogicMonitor](collectors/logicmonitor.md)
 - [New Relic](collectors/newrelic.md) Instrument once, analyze everything in one place.
+- [SigNoz](collectors/signoz.md) SigNoz vs Jaeger
 - Sentry Software
 - Splunk
 - Sumo Logic
-- [Uptrace](collectors/uptrace.md)
+- [Uptrace](collectors/uptrace.md) optimize performance and monitor errors & logs.
