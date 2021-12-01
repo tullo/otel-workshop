@@ -43,8 +43,8 @@ func newHTTPSExporter(ctx context.Context) (*otlptrace.Exporter, error) {
 
 func newOTLauncher() func() {
 	ctx := context.Background()
-	//exp, err := newGRPCExporter(ctx)
-	exp, err := newHTTPSExporter(ctx)
+	exp, err := newGRPCExporter(ctx)
+	//exp, err := newHTTPSExporter(ctx)
 	if err != nil {
 		log.Fatal(err)
 	}
