@@ -7,7 +7,7 @@
 - Azure
 - Datadog
 - Dynatrace
-- Elastic
+- [Elastic](collectors/elastic.md)
 - Grafana Labs
 - [Honeycomb](collectors/honeycomb.md)
 - [Lightstep](collectors/lightstep.md) Increase developer productivity.
