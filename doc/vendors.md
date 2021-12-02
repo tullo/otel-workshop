@@ -16,5 +16,5 @@
 - [SigNoz](collectors/signoz.md) SigNoz vs Jaeger
 - Sentry Software
 - [Splunk](collectors/splunk.md) (chrome only)
-- Sumo Logic
+- [Sumo Logic](collectors/sumologic.md)
 - [Uptrace](collectors/uptrace.md) optimize performance and monitor errors & logs.

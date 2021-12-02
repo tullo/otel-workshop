@@ -1,0 +1,45 @@
+receivers:
+  jaeger:
+    protocols:
+      thrift_compact:
+        endpoint: "0.0.0.0:6831"
+      thrift_binary:
+        endpoint: "0.0.0.0:6832"
+      grpc:
+        endpoint: "0.0.0.0:14250"
+      thrift_http:
+        endpoint: "0.0.0.0:14268"
+  opencensus:
+    endpoint: "0.0.0.0:55678"
+  otlp:
+    protocols:
+      grpc:
+        endpoint: "0.0.0.0:4317"
+      http:
+        endpoint: "0.0.0.0:55681"
+  zipkin:
+    endpoint: "0.0.0.0:9411"
+processors:
+  memory_limiter:
+    check_interval: 5s
+    limit_mib: 1900
+  batch:
+    send_batch_size: 256
+    send_batch_max_size: 512
+    timeout: 5s
+  cascading_filter:
+    trace_accept_filters:
+extensions:
+  health_check: {}
+exporters:
+  otlphttp:
+    traces_endpoint: https://collectors.de.sumologic.com/receiver/v1/trace/...
+  logging:
+    loglevel: debug
+service:
+  extensions: [health_check]
+  pipelines:
+    traces:
+      receivers: [jaeger, opencensus, otlp, zipkin]
+      processors: [memory_limiter, cascading_filter, batch]
+      exporters: [otlphttp]

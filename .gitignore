@@ -9,6 +9,7 @@ cmd/signoz/bookstore/gin-bookstore
 cmd/signoz/bookstore/test.db
 cmd/signoz/hotrod/hotrod
 cmd/splunk/splunk
+cmd/sumologic/sumologic
 cmd/uptrace/uptrace
 cmd/uptrace/country-info/country-info
 **/traces.json
