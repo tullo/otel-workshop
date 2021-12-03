@@ -1,4 +1,5 @@
 cmd/aspecto/aspecto
+cmd/datadog/datadog
 cmd/elastic/elastic
 cmd/honeycomb/honeycomb
 cmd/lslauncher/lslauncher

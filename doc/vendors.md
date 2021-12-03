@@ -5,7 +5,7 @@
 - [Aspecto](collectors/aspecto.md) Jaeger on steroids.
 - AWS
 - Azure
-- Datadog
+- [Datadog](collectors/datadog.md)
 - Dynatrace
 - [Elastic](collectors/elastic.md)
 - Grafana Labs

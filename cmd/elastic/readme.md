@@ -1,4 +1,4 @@
-# Sumo Logic
+# Elastic
 
 ## Start Elastic APM
 
