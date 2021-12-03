@@ -1,10 +1,16 @@
-# Workshop
+# OpenTelemetry
+
+- [backends](collectors/)
+- [otel](otel.md)
+- [vendors](vendors.md)
+
+## Workshop
 
 Slides: [Understanding Distributed Systems with OpenTelemetry](doc/OT-Workshop-Fib-example.pdf)
 
 © [Adam Johnson](https://bit.ly/3wigdFJ), Lightstep
 
-## SDK, Exporters and Collector Services
+### SDK, Exporters and Collector Services
 
 - SDK
   - OpenTelemetry's SDK implements `trace` & `span` creation.
@@ -23,13 +29,14 @@ can be reconﬁgured without changing instrumented code.
 
 ![meterProvider](OT-collector.png)
 
-## OT API
+### OT API
+
 - Tracer
   - Responsible for tracking the currently active span.
 - Meter
   - Responsible for accumulating a collection of statistics.
 
-### Tracer methods
+#### Tracer methods
 
  - `tracer.Start(ctx, name, options)`
    - Returns a child of the current span, and makes it current.
@@ -57,7 +64,8 @@ sp.AddEvent(ctx, "user approved")
 sp.SetAttributes(attribute.String("key", "value"))
 ```
 
-## Context Propagation
+### Context Propagation
+
 - Distributed context is an abstract data type that represents collection of entries.
 - Each key is associated with exactly one value.
 - It is serialized for propagation across **process boundaries**.
@@ -65,7 +73,7 @@ sp.SetAttributes(attribute.String("key", "value"))
 - `W3C` TraceContext is the de-facto standard.
   - `B3` is more broadly compatible with existing systems.
 
-## Automatic Instrumentation
+### Automatic Instrumentation
 
 OpenTelemetry has wrappers around common frameworks to propagate context and make it accessible.
 ```go
@@ -79,7 +87,7 @@ func someHandler(w ResponseWriter, r *Request) {
 }
 ```
 
-## Manual Instrumentation
+### Manual Instrumentation
 
  - [resource deﬁnition](../cmd/stdout/loop/resource.go) - identiﬁes the resource or machine creating the telemetry.
  - [exporter](../cmd/stdout/loop/exporter.go) - sends the tracing data somewhere.
@@ -103,7 +111,7 @@ func someHandler(w ResponseWriter, r *Request) {
     }
     ```
 
-## Automatic Metrics Instrumentation
+### Automatic Metrics Instrumentation
 
 Metric instrumentation looks a little different
 
@@ -112,7 +120,7 @@ Metric instrumentation looks a little different
 - OT collector can both PUSH and PULL
   - Works with existing Prometheus libraries
 
-## Manual Metrics Instrumentation
+### Manual Metrics Instrumentation
 
  - [resource deﬁnition](../cmd/otconf/config.go#L127) - identiﬁes the resource or machine creating the metrics.
  - [exporter](../cmd/otconf/exporter.go#L35) - sends the metrics data somewhere.
