@@ -17,4 +17,11 @@
 - [Sentry](collectors/sentry.md) (requires JRE)
 - [Splunk](collectors/splunk.md) (chrome only)
 - [Sumo Logic](collectors/sumologic.md)
-- [Uptrace](collectors/uptrace.md) optimize performance and monitor errors & logs.
+- [Uptrace](collectors/uptrace.md)
+
+## OpenAPM
+
+OpenAPM shows you which open source APM tools are suitable for your stack.
+
+- https://openapm.io/landscape
+- https://openapm.io/statistics
