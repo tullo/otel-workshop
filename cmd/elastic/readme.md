@@ -16,7 +16,7 @@ sudo pip3 install docker-compose
 # Install go
 wget https://go.dev/dl/go1.17.3.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.17.3.linux-amd64.tar.gz
-echo "" >> .bashrc
+echo 'PATH=$PATH:/usr/local/go/bin' >> .bashrc
 
 # Clone git repo
 git clone https://github.com/riferrei/otel-with-golang.git \

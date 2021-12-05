@@ -2,6 +2,7 @@ cmd/aspecto/aspecto
 cmd/datadog/datadog
 cmd/elastic/elastic
 cmd/honeycomb/honeycomb
+cmd/instana/instana
 cmd/lslauncher/lslauncher
 cmd/newrelic/newrelic
 cmd/otconf/otconf

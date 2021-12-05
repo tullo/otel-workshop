@@ -10,6 +10,7 @@
 - [Elastic](collectors/elastic.md)
 - Grafana Labs
 - [Honeycomb](collectors/honeycomb.md)
+- [Instana](collectors/instana.md)
 - [Lightstep](collectors/lightstep.md) Increase developer productivity.
 - [LogicMonitor](collectors/logicmonitor.md)
 - [New Relic](collectors/newrelic.md) Instrument once, analyze everything in one place.
