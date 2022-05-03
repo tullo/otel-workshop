@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/gin-gonic/gin v1.7.7
+	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/jinzhu/gorm v1.9.16
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/lib/pq v1.2.0 // indirect

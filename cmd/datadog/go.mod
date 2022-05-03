@@ -21,7 +21,9 @@ require (
 	github.com/google/pprof v0.0.0-20210423192551-a2663126120b // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
+	github.com/instana/go-sensor v1.38.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
+	github.com/looplab/fsm v0.1.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/newrelic/go-agent/v3 v3.15.1 // indirect
 	github.com/opentracing/opentracing-go v1.1.0 // indirect
