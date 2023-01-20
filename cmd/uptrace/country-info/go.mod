@@ -3,7 +3,7 @@ module github.com/tullo/otel-workshop/cmd/uptrace/countryinfo
 go 1.17
 
 require (
-	github.com/segmentio/encoding v0.3.2
+	github.com/segmentio/encoding v0.3.6
 	github.com/uptrace/uptrace-go v1.2.0
 	go.opentelemetry.io/otel v1.2.0
 )
@@ -13,7 +13,7 @@ require (
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.6 // indirect
-	github.com/segmentio/asm v1.1.0 // indirect
+	github.com/segmentio/asm v1.1.3 // indirect
 	go.opentelemetry.io/contrib/instrumentation/runtime v0.27.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric v0.25.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v0.25.0 // indirect
