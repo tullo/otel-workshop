@@ -9,6 +9,8 @@ github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5Cc
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/tullo/otel-workshop/recursive/fib v0.0.0-20211126122010-1c4a3b2be0ff h1:Gi0aoXRtTOOtJLTCcpb8ht6LdnbISIUBowzSm3hg55c=
 github.com/tullo/otel-workshop/recursive/fib v0.0.0-20211126122010-1c4a3b2be0ff/go.mod h1:Rk8qRjr98YZQ4n+XWxl6LGKFRWqPSoK2sQjHsXDJyFo=
+github.com/tullo/otel-workshop/recursive/fib v0.0.0-20230120160738-51b8f6816f33 h1:Iv9MBl1vz5oFsJ+FJmO8CtrayZkvY8u+qb4d+fLGrrk=
+github.com/tullo/otel-workshop/recursive/fib v0.0.0-20230120160738-51b8f6816f33/go.mod h1:Rk8qRjr98YZQ4n+XWxl6LGKFRWqPSoK2sQjHsXDJyFo=
 go.opentelemetry.io/otel v1.2.0 h1:YOQDvxO1FayUcT9MIhJhgMyNO1WqoduiyvQHzGN0kUQ=
 go.opentelemetry.io/otel v1.2.0/go.mod h1:aT17Fk0Z1Nor9e0uisf98LrntPGMnk4frBO9+dkf69I=
 go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.2.0 h1:OiYdrCq1Ctwnovp6EofSPwlp5aGy4LgKNbkg7PtEUw8=
