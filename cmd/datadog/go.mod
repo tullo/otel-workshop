@@ -6,7 +6,7 @@ replace github.com/tullo/otel-workshop/web/fib => /home/anda/code/otel/workshop/
 
 require (
 	github.com/tullo/otel-workshop/web/fib v0.3.3
-	gopkg.in/DataDog/dd-trace-go.v1 v1.34.0
+	gopkg.in/DataDog/dd-trace-go.v1 v1.46.1
 )
 
 require (
