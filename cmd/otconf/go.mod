@@ -9,7 +9,7 @@ replace (
 )
 
 require (
-	github.com/sethvargo/go-envconfig v0.3.2
+	github.com/sethvargo/go-envconfig v0.8.3
 	github.com/tullo/otel-workshop/web/fib v0.0.0-20211125223905-d84350acb4a2
 	go.opentelemetry.io/collector v0.28.0
 	go.opentelemetry.io/contrib/instrumentation/host v0.23.0
