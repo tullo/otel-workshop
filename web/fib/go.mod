@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/hashicorp/go-cleanhttp v0.5.2
-	github.com/instana/go-sensor v1.38.0
+	github.com/instana/go-sensor v1.49.0
 	github.com/newrelic/go-agent/v3 v3.15.1
 	github.com/signalfx/signalfx-go-tracing/contrib/net/http v1.12.0
 	go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace v0.27.0
