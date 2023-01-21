@@ -13,6 +13,8 @@ github.com/tullo/otel-workshop/loop/fib v0.0.0-20230120160738-51b8f6816f33 h1:BG
 github.com/tullo/otel-workshop/loop/fib v0.0.0-20230120160738-51b8f6816f33/go.mod h1:xqMasVm4upHiAo35eHw+CC47HKNfFUmolAkFNab++DI=
 github.com/tullo/otel-workshop/loop/fib v0.0.0-20230121182000-72577bc50ab5 h1:zpDqkl5rnBQMD+ZbxgMEgW76nByJl36L0923n44Jd1E=
 github.com/tullo/otel-workshop/loop/fib v0.0.0-20230121182000-72577bc50ab5/go.mod h1:xqMasVm4upHiAo35eHw+CC47HKNfFUmolAkFNab++DI=
+github.com/tullo/otel-workshop/loop/fib v0.0.0-20230121184025-d1d6134dced7 h1:eHaBc+BlSbLGCi3+T9DTM0Xtgo3y1C8huMvzx4Gdbqo=
+github.com/tullo/otel-workshop/loop/fib v0.0.0-20230121184025-d1d6134dced7/go.mod h1:xqMasVm4upHiAo35eHw+CC47HKNfFUmolAkFNab++DI=
 go.opentelemetry.io/otel v1.2.0 h1:YOQDvxO1FayUcT9MIhJhgMyNO1WqoduiyvQHzGN0kUQ=
 go.opentelemetry.io/otel v1.2.0/go.mod h1:aT17Fk0Z1Nor9e0uisf98LrntPGMnk4frBO9+dkf69I=
 go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.2.0 h1:OiYdrCq1Ctwnovp6EofSPwlp5aGy4LgKNbkg7PtEUw8=
