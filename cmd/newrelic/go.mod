@@ -5,7 +5,7 @@ go 1.17
 replace github.com/tullo/otel-workshop/web/fib => /home/anda/code/otel/workshop/web/fib
 
 require (
-	github.com/newrelic/go-agent/v3 v3.15.1
+	github.com/newrelic/go-agent/v3 v3.20.3
 	github.com/tullo/otel-workshop/web/fib v0.3.0
 )
 
