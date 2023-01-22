@@ -15,6 +15,8 @@ github.com/tullo/otel-workshop/recursive/fib v0.0.0-20230121182000-72577bc50ab5 
 github.com/tullo/otel-workshop/recursive/fib v0.0.0-20230121182000-72577bc50ab5/go.mod h1:Rk8qRjr98YZQ4n+XWxl6LGKFRWqPSoK2sQjHsXDJyFo=
 github.com/tullo/otel-workshop/recursive/fib v0.0.0-20230121184025-d1d6134dced7 h1:h+AJ3tTrEWFOrj7fxFDfOlnf/6y1yO+aohewOmfSBVg=
 github.com/tullo/otel-workshop/recursive/fib v0.0.0-20230121184025-d1d6134dced7/go.mod h1:Rk8qRjr98YZQ4n+XWxl6LGKFRWqPSoK2sQjHsXDJyFo=
+github.com/tullo/otel-workshop/recursive/fib v0.0.0-20230121215318-aa681931c7b4 h1:nuDTe8/BToXA+nzCuzL5ahZ06X7MrjZLxW2ATd7UXa8=
+github.com/tullo/otel-workshop/recursive/fib v0.0.0-20230121215318-aa681931c7b4/go.mod h1:Rk8qRjr98YZQ4n+XWxl6LGKFRWqPSoK2sQjHsXDJyFo=
 go.opentelemetry.io/otel v1.2.0 h1:YOQDvxO1FayUcT9MIhJhgMyNO1WqoduiyvQHzGN0kUQ=
 go.opentelemetry.io/otel v1.2.0/go.mod h1:aT17Fk0Z1Nor9e0uisf98LrntPGMnk4frBO9+dkf69I=
 go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.2.0 h1:OiYdrCq1Ctwnovp6EofSPwlp5aGy4LgKNbkg7PtEUw8=
