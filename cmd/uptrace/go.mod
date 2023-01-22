@@ -3,7 +3,7 @@ module github.com/tullo/otel-workshop/cmd/uptrace
 go 1.17
 
 require (
-	github.com/tullo/otel-workshop/web/fib v0.0.0-20230121182000-72577bc50ab5
+	github.com/tullo/otel-workshop/web/fib v0.0.0-20230121215318-aa681931c7b4
 	go.opentelemetry.io/otel v1.11.2
 )
 
@@ -31,7 +31,7 @@ require (
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/looplab/fsm v0.1.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
-	github.com/newrelic/go-agent/v3 v3.15.1 // indirect
+	github.com/newrelic/go-agent/v3 v3.20.3 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/philhofer/fwd v1.1.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect

@@ -727,6 +727,8 @@ github.com/nats-io/nuid v1.0.1/go.mod h1:19wcPz3Ph3q0Jbyiqsd0kePYG7A95tJPxeL+1OS
 github.com/nbutton23/zxcvbn-go v0.0.0-20180912185939-ae427f1e4c1d/go.mod h1:o96djdrsSGy3AWPyBgZMAGfxZNfgntdJG+11KU4QvbU=
 github.com/newrelic/go-agent/v3 v3.15.1 h1:0N1K7fTjRty69VHUHvz7fA3bApLUs2MjzsYM4GWHYL4=
 github.com/newrelic/go-agent/v3 v3.15.1/go.mod h1:1A1dssWBwzB7UemzRU6ZVaGDsI+cEn5/bNxI0wiYlIc=
+github.com/newrelic/go-agent/v3 v3.20.3 h1:hUBAMq/Y2Y9as5/yxQbf0zNde/X7w58cWZkm2flZIaw=
+github.com/newrelic/go-agent/v3 v3.20.3/go.mod h1:rT6ZUxJc5rQbWLyCtjqQCOcfb01lKRFbc1yMQkcboWM=
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLANZcx1PVRCS0qkT7pwLkGfwJo4zjcN/Tysno=
 github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d/go.mod h1:YUTz3bUH2ZwIWBy3CJBeOBEugqcmXREj14T+iG/4k4U=
 github.com/nxadm/tail v1.4.4/go.mod h1:kenIhsEOeOJmVchQTgglprH7qJGnHDVpk1VPCcaMI8A=
@@ -957,6 +959,8 @@ github.com/tullo/otel-workshop/web/fib v0.0.0-20211125223905-d84350acb4a2 h1:fh/
 github.com/tullo/otel-workshop/web/fib v0.0.0-20211125223905-d84350acb4a2/go.mod h1:gVR3Iy2Z00fIqgGUKJGenRlbqqD2X4/zu4yuQER3ThM=
 github.com/tullo/otel-workshop/web/fib v0.0.0-20230121182000-72577bc50ab5 h1:8QYHGoXaWgD32KvTDbsy8CSNxCGaiPczi5QansvqkY0=
 github.com/tullo/otel-workshop/web/fib v0.0.0-20230121182000-72577bc50ab5/go.mod h1:B+Xn+dM8T5PLfQAPrdtjKfbySbH3+fgF1qxlc2AwgAg=
+github.com/tullo/otel-workshop/web/fib v0.0.0-20230121215318-aa681931c7b4 h1:BSqdtIEdLRxK3+NMdGd3GAN0BfCpzkfHa+vHoTT5J04=
+github.com/tullo/otel-workshop/web/fib v0.0.0-20230121215318-aa681931c7b4/go.mod h1:Tq1RYl7ZPXn2JqyjOrNFAel3g3vV+Dg+amprB02gMu8=
 github.com/uber/jaeger-client-go v2.25.0+incompatible/go.mod h1:WVhlPFC8FDjOFMMWRy2pZqQJSXxYSwNYOkTr/Z6d3Kk=
 github.com/uber/jaeger-client-go v2.29.1+incompatible/go.mod h1:WVhlPFC8FDjOFMMWRy2pZqQJSXxYSwNYOkTr/Z6d3Kk=
 github.com/uber/jaeger-lib v2.4.0+incompatible/go.mod h1:ComeNDZlWwrWnDv8aPp0Ba6+uUTzImX/AauajbLI56U=
