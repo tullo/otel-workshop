@@ -10,7 +10,7 @@ replace (
 
 require (
 	github.com/sethvargo/go-envconfig v0.8.3
-	github.com/tullo/otel-workshop/web/fib v0.0.0-20230121182000-72577bc50ab5
+	github.com/tullo/otel-workshop/web/fib v0.0.0-20230121215318-aa681931c7b4
 	go.opentelemetry.io/collector v0.28.0
 	go.opentelemetry.io/contrib/instrumentation/host v0.23.0
 	go.opentelemetry.io/contrib/instrumentation/runtime v0.23.0
@@ -53,7 +53,7 @@ require (
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/looplab/fsm v0.1.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
-	github.com/newrelic/go-agent/v3 v3.15.1 // indirect
+	github.com/newrelic/go-agent/v3 v3.20.3 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/philhofer/fwd v1.1.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
