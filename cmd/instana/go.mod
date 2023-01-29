@@ -5,7 +5,7 @@ go 1.17
 replace github.com/tullo/otel-workshop/web/fib => /home/anda/code/otel/workshop/web/fib
 
 require (
-	github.com/instana/go-sensor v1.49.0
+	github.com/instana/go-sensor v1.50.0
 	github.com/tullo/otel-workshop/web/fib v0.3.3
 )
 
