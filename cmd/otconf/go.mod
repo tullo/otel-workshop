@@ -13,7 +13,7 @@ require (
 	github.com/tullo/otel-workshop/web/fib v0.0.0-20230121215318-aa681931c7b4
 	go.opentelemetry.io/collector v0.70.0
 	go.opentelemetry.io/contrib/instrumentation/host v0.23.0
-	go.opentelemetry.io/contrib/instrumentation/runtime v0.23.0
+	go.opentelemetry.io/contrib/instrumentation/runtime v0.38.0
 	go.opentelemetry.io/contrib/propagators/b3 v0.23.0
 	go.opentelemetry.io/contrib/propagators/ot v0.23.0
 	go.opentelemetry.io/otel v1.2.0
