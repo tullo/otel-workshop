@@ -5,7 +5,7 @@ go 1.19
 replace github.com/tullo/otel-workshop/web/fib => /home/anda/code/otel/workshop/web/fib
 
 require (
-	github.com/tullo/otel-workshop/web/fib v0.3.1
+	github.com/tullo/otel-workshop/web/fib v0.0.0-00010101000000-000000000000
 	go.opentelemetry.io/otel v1.12.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.12.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.12.0
@@ -31,11 +31,9 @@ require (
 	github.com/golang/glog v1.0.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/uuid v1.3.0 // indirect
-	github.com/grpc-ecosystem/grpc-gateway/v2 v2.15.0 // indirect
+	github.com/grpc-ecosystem/grpc-gateway/v2 v2.7.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
-	github.com/instana/go-sensor v1.50.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
-	github.com/looplab/fsm v1.0.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/newrelic/go-agent/v3 v3.20.3 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
@@ -62,7 +60,7 @@ require (
 	golang.org/x/time v0.3.0 // indirect
 	golang.org/x/tools v0.5.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
-	google.golang.org/genproto v0.0.0-20230127162408-596548ed4efa // indirect
+	google.golang.org/genproto v0.0.0-20230202175211-008b39050e57 // indirect
 	google.golang.org/grpc v1.52.3 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/DataDog/dd-trace-go.v1 v1.47.0 // indirect
