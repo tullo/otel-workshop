@@ -1,5 +1,6 @@
 package main
 
+/*
 import (
 	"context"
 
@@ -52,3 +53,4 @@ func newMetricsExporter(c Config, headerName string) (*otlpmetric.Exporter, erro
 		),
 	)
 }
+*/

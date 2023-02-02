@@ -1,6 +1,6 @@
 package main
 
-import (
+/*
 	"context"
 	"fmt"
 	"os"
@@ -15,8 +15,9 @@ import (
 	controller "go.opentelemetry.io/otel/sdk/metric/controller/basic"
 	processor "go.opentelemetry.io/otel/sdk/metric/processor/basic"
 	selector "go.opentelemetry.io/otel/sdk/metric/selector/simple"
-)
+*/
 
+/*
 func setupMetrics(c Config, headerName string) (func() error, error) {
 	if !c.MetricsEnabled {
 		c.logger.Debugf("metrics are disabled by configuration: no endpoint set")
@@ -119,3 +120,5 @@ func collectMetrics(ctx context.Context) {
 		time.Sleep(time.Minute)
 	}
 }
+
+*/

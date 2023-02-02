@@ -26,7 +26,7 @@ func main() {
 	errCh := make(chan error)
 
 	// Start metrics collection.
-	go collectMetrics(context.Background())
+	//go collectMetrics(context.Background())
 
 	// Start web server.
 	s := fib.NewServer(os.Stdin, l)
