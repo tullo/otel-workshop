@@ -4,14 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"log"
-	"os"
 
 	"github.com/sethvargo/go-envconfig"
 	//"go.opentelemetry.io/collector/translator/conventions"
 	"go.opentelemetry.io/otel"
-	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/sdk/resource"
-	sc "go.opentelemetry.io/otel/semconv/v1.7.0"
 )
 
 const (
@@ -111,17 +108,19 @@ func ConfigureOpentelemetry(headerName string, opts ...Option) OTConf {
 		otel.SetErrorHandler(c.errorHandler)
 	}
 
-	otc := OTConf{config: c}
-	for _, setup := range []setupFunc{setupTracing, setupMetrics} {
-		shutdown, err := setup(c, headerName)
-		if err != nil {
-			c.logger.Fatalf("setup error: %v", err)
-			continue
+	/*
+		otc := OTConf{config: c}
+		for _, setup := range []setupFunc{setupTracing, setupMetrics} {
+			shutdown, err := setup(c, headerName)
+			if err != nil {
+				c.logger.Fatalf("setup error: %v", err)
+				continue
+			}
+			if shutdown != nil {
+				otc.shutdownFuncs = append(otc.shutdownFuncs, shutdown)
+			}
 		}
-		if shutdown != nil {
-			otc.shutdownFuncs = append(otc.shutdownFuncs, shutdown)
-		}
-	}
+	*/
 
 	return OTConf{config: c}
 }
@@ -129,57 +128,59 @@ func ConfigureOpentelemetry(headerName string, opts ...Option) OTConf {
 func newResource(c *Config) *resource.Resource {
 	r := resource.Environment()
 
-	hostnameSet := false
-	for iter := r.Iter(); iter.Next(); {
-		if iter.Attribute().Key == conventions.AttributeHostName && len(iter.Attribute().Value.Emit()) > 0 {
-			hostnameSet = true
+	/*
+		hostnameSet := false
+		for iter := r.Iter(); iter.Next(); {
+			if iter.Attribute().Key == conventions.AttributeHostName && len(iter.Attribute().Value.Emit()) > 0 {
+				hostnameSet = true
+			}
 		}
-	}
 
-	attributes := []attribute.KeyValue{
-		//attribute.String(conventions.AttributeTelemetrySDKName, "otconf"),
-		//attribute.String(conventions.AttributeTelemetrySDKLanguage, "go"),
-		//attribute.String(conventions.AttributeTelemetrySDKVersion, version),
-	}
-
-	if len(c.ServiceName) > 0 {
-		//attributes = append(attributes, attribute.String(conventions.AttributeServiceName, c.ServiceName))
-	}
-
-	if len(c.ServiceVersion) > 0 {
-		//attributes = append(attributes, attribute.String(conventions.AttributeServiceVersion, c.ServiceVersion))
-	}
-
-	for key, value := range c.resourceAttributes {
-		if len(value) > 0 {
-			//if key == conventions.AttributeHostName {
-			//	hostnameSet = true
-			//}
-			attributes = append(attributes, attribute.String(key, value))
+		attributes := []attribute.KeyValue{
+			//attribute.String(conventions.AttributeTelemetrySDKName, "otconf"),
+			//attribute.String(conventions.AttributeTelemetrySDKLanguage, "go"),
+			//attribute.String(conventions.AttributeTelemetrySDKVersion, version),
 		}
-	}
 
-	if !hostnameSet {
-		hostname, err := os.Hostname()
-		if err != nil {
-			c.logger.Debugf("unable to set host.name. Set OTEL_RESOURCE_ATTRIBUTES=\"host.name=<your_host_name>\" env var or configure WithResourceAttributes in code: %v", err)
-		} else {
-			//attributes = append(attributes, attribute.String(conventions.AttributeHostName, hostname))
+		if len(c.ServiceName) > 0 {
+			//attributes = append(attributes, attribute.String(conventions.AttributeServiceName, c.ServiceName))
 		}
-	}
 
-	attributes = append(r.Attributes(), attributes...)
+		if len(c.ServiceVersion) > 0 {
+			//attributes = append(attributes, attribute.String(conventions.AttributeServiceVersion, c.ServiceVersion))
+		}
 
-	// These detectors can't actually fail, ignoring the error.
-	r, _ = resource.New(
-		context.Background(),
-		resource.WithSchemaURL(sc.SchemaURL),
-		resource.WithAttributes(attributes...),
-	)
+		for key, value := range c.resourceAttributes {
+			if len(value) > 0 {
+				//if key == conventions.AttributeHostName {
+				//	hostnameSet = true
+				//}
+				attributes = append(attributes, attribute.String(key, value))
+			}
+		}
 
-	// Note: There are new detectors we may wish to take advantage
-	// of, now available in the default SDK (e.g., WithProcess(),
-	// WithOSType(), ...).
+		if !hostnameSet {
+			hostname, err := os.Hostname()
+			if err != nil {
+				c.logger.Debugf("unable to set host.name. Set OTEL_RESOURCE_ATTRIBUTES=\"host.name=<your_host_name>\" env var or configure WithResourceAttributes in code: %v", err)
+			} else {
+				//attributes = append(attributes, attribute.String(conventions.AttributeHostName, hostname))
+			}
+		}
+
+		attributes = append(r.Attributes(), attributes...)
+
+		// These detectors can't actually fail, ignoring the error.
+		r, _ = resource.New(
+			context.Background(),
+			resource.WithSchemaURL(sc.SchemaURL),
+			resource.WithAttributes(attributes...),
+		)
+
+		// Note: There are new detectors we may wish to take advantage
+		// of, now available in the default SDK (e.g., WithProcess(),
+		// WithOSType(), ...).
+	*/
 	return r
 }
 

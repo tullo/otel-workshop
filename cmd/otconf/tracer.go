@@ -1,5 +1,6 @@
 package main
 
+/*
 import (
 	"context"
 	"fmt"
@@ -58,3 +59,4 @@ func sampler(c Config) trace.Sampler {
 
 	return s
 }
+*/
