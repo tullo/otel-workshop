@@ -6,9 +6,9 @@ require (
 	github.com/gin-gonic/gin v1.8.2
 	github.com/jinzhu/gorm v1.9.16
 	go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin v0.17.0
-	go.opentelemetry.io/otel v0.17.0
+	go.opentelemetry.io/otel v1.12.0
 	go.opentelemetry.io/otel/exporters/otlp v0.17.0
-	go.opentelemetry.io/otel/sdk v0.17.0
+	go.opentelemetry.io/otel/sdk v1.12.0
 	google.golang.org/grpc v1.35.0
 )
 
