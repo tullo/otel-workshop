@@ -25,7 +25,12 @@ func newLighstepLauncher() launcher.Launcher {
 		OTEL_LOG_LEVEL=debug
 		OTEL_RESOURCE_ATTRIBUTES=host.hostname=fib.workshop.com,deployment.region=eu-west1,deployment.environment=workshop
 	*/
-	return launcher.ConfigureOpentelemetry()
+	// return launcher.ConfigureOpentelemetry()
+	otel := launcher.ConfigureOpentelemetry(
+		launcher.WithServiceName("fib-workshop"),
+		launcher.WithAccessToken("access-token"),
+	)
+	return otel
 	/*
 		ls := launcher.ConfigureOpentelemetry(
 			launcher.WithServiceName("fib-workshop"),

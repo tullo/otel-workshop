@@ -5,7 +5,7 @@ go 1.19
 replace github.com/tullo/otel-workshop/loop/fib => /home/anda/code/otel/workshop/loop/fib
 
 require (
-	github.com/tullo/otel-workshop/loop/fib v0.0.0-00010101000000-000000000000
+	github.com/tullo/otel-workshop/loop/fib v0.0.0-20230202225614-77ab436b2376
 	go.opentelemetry.io/otel v1.12.0
 	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.12.0
 	go.opentelemetry.io/otel/sdk v1.12.0
@@ -15,5 +15,5 @@ require (
 require (
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
-	golang.org/x/sys v0.0.0-20220919091848-fb04ddd9f9c8 // indirect
+	golang.org/x/sys v0.4.0 // indirect
 )
