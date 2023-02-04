@@ -6,7 +6,8 @@ import (
 	"os/signal"
 
 	instana "github.com/instana/go-sensor"
-	"github.com/tullo/otel-workshop/web/fib"
+	"github.com/tullo/otel-workshop/cmd/instana/fib"
+	//"github.com/tullo/otel-workshop/web/fib"
 )
 
 func main() {
