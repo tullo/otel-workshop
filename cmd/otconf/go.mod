@@ -6,7 +6,7 @@ replace github.com/tullo/otel-workshop/web/fib => /home/anda/code/otel/workshop/
 
 require (
 	github.com/sethvargo/go-envconfig v0.8.3
-	github.com/tullo/otel-workshop/web/fib v0.0.0-20230202225614-77ab436b2376
+	github.com/tullo/otel-workshop/web/fib bb4270506960
 	go.opentelemetry.io/contrib/propagators/b3 v1.13.0
 	go.opentelemetry.io/contrib/propagators/ot v1.13.0
 	go.opentelemetry.io/otel v1.12.0

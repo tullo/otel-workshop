@@ -9,7 +9,7 @@ replace github.com/tullo/otel-workshop/web/fib => /home/anda/code/otel/workshop/
 
 require (
 	github.com/lightstep/otel-launcher-go v1.12.0
-	github.com/tullo/otel-workshop/web/fib v0.0.0-20230202225614-77ab436b2376
+	github.com/tullo/otel-workshop/web/fib bb4270506960
 	go.opentelemetry.io/otel v1.12.0
 	go.opentelemetry.io/otel/metric v0.35.0
 )
