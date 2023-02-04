@@ -7,7 +7,7 @@ import (
 	"os/signal"
 
 	"github.com/newrelic/go-agent/v3/newrelic"
-	"github.com/tullo/otel-workshop/web/fib"
+	"github.com/tullo/otel-workshop/cmd/newrelic/fib"
 )
 
 func main() {
