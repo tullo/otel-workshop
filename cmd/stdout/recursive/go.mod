@@ -5,7 +5,7 @@ go 1.19
 replace github.com/tullo/otel-workshop/recursive/fib => /home/anda/code/otel/workshop/recursive/fib
 
 require (
-	github.com/tullo/otel-workshop/recursive/fib v0.0.0-20230202225614-77ab436b2376
+	github.com/tullo/otel-workshop/recursive/fib bb4270506960
 	go.opentelemetry.io/otel v1.12.0
 	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.12.0
 	go.opentelemetry.io/otel/sdk v1.12.0
