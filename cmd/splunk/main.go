@@ -7,7 +7,8 @@ import (
 	"os/signal"
 
 	"github.com/signalfx/signalfx-go-tracing/tracing"
-	"github.com/tullo/otel-workshop/web/fib"
+	"github.com/tullo/otel-workshop/cmd/splunk/fib"
+	//"github.com/tullo/otel-workshop/web/fib"
 )
 
 func main() {
