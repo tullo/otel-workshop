@@ -8,7 +8,7 @@ cmd/newrelic/newrelic
 cmd/otconf/otconf
 cmd/stdout/loop/loop
 cmd/stdout/recursive/recursive
-cmd/signoz/bookstore/gin-bookstore
+cmd/signoz/bookstore/bookstore
 cmd/signoz/bookstore/test.db
 cmd/signoz/hotrod/hotrod
 cmd/splunk/splunk
