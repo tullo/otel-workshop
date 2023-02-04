@@ -2,32 +2,26 @@ package main
 
 import (
 	"context"
-	"log"
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/rahmanfadhil/gin-bookstore/controllers"
-	"github.com/rahmanfadhil/gin-bookstore/models"
+	"github.com/tullo/otel-workshop/cmd/signoz/bookstore/controllers"
+	"github.com/tullo/otel-workshop/cmd/signoz/bookstore/models"
 	"go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin"
-	"go.opentelemetry.io/otel"
-	"go.opentelemetry.io/otel/exporters/otlp"
-	"go.opentelemetry.io/otel/exporters/otlp/otlpgrpc"
-	"go.opentelemetry.io/otel/label"
-	"go.opentelemetry.io/otel/sdk/resource"
-	"go.opentelemetry.io/otel/sdk/trace"
-	"google.golang.org/grpc/credentials"
 )
 
 var (
-	serviceName  = os.Getenv("SERVICE_NAME")
-	signozToken  = os.Getenv("SIGNOZ_ACCESS_TOKEN")
-	collectorURL = os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT")
-	insecure     = os.Getenv("INSECURE_MODE")
+	serviceName = os.Getenv("SERVICE_NAME")
+	// signozToken  = os.Getenv("SIGNOZ_ACCESS_TOKEN")
+	// collectorURL = os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT")
+	// insecure     = os.Getenv("INSECURE_MODE")
 )
 
 func initTracer() func(context.Context) error {
 
-	headers := map[string]string{
+	return nil
+
+	/* headers := map[string]string{
 		"signoz-access-token": signozToken,
 	}
 
@@ -51,8 +45,8 @@ func initTracer() func(context.Context) error {
 	resources, err := resource.New(
 		context.Background(),
 		resource.WithAttributes(
-			label.String("service.name", serviceName),
-			label.String("library.language", "go"),
+			attribute.String("service.name", serviceName),
+			attribute.String("library.language", "go"),
 		),
 	)
 	if err != nil {
@@ -67,7 +61,7 @@ func initTracer() func(context.Context) error {
 			trace.WithResource(resources),
 		),
 	)
-	return exporter.Shutdown
+	return exporter.Shutdown */
 }
 
 func main() {
