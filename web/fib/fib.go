@@ -42,10 +42,10 @@ func (s *Server) Serve(ctx context.Context) error {
 	mux := http.NewServeMux()
 
 	// WithPublicEndpoint() option marks handlers as a trace boundary.
-	mux.Handle("/", otelhttp.NewHandler(otelhttp.WithRouteTag("/", http.HandlerFunc(rootHandler)), "root", otelhttp.WithPublicEndpoint()))
+	mux.Handle("/", otelhttp.NewHandler(otelhttp.WithRouteTag("/", http.HandlerFunc(RootHandler)), "root", otelhttp.WithPublicEndpoint()))
 	mux.Handle("/favicon.ico", http.NotFoundHandler())
-	mux.Handle("/fib", otelhttp.NewHandler(otelhttp.WithRouteTag("/fib", http.HandlerFunc(fibHandler)), "fibonacci", otelhttp.WithPublicEndpoint()))
-	mux.Handle("/fibinternal", http.HandlerFunc(fibHandler))
+	mux.Handle("/fib", otelhttp.NewHandler(otelhttp.WithRouteTag("/fib", http.HandlerFunc(FibHandler)), "fibonacci", otelhttp.WithPublicEndpoint()))
+	mux.Handle("/fibinternal", http.HandlerFunc(FibHandler))
 
 	s.l.Println("Your server is live!\nTry to navigate to: http://127.0.0.1:3000/fib?n=6")
 	if err := http.ListenAndServe("127.0.0.1:3000", mux); err != nil {
@@ -55,7 +55,7 @@ func (s *Server) Serve(ctx context.Context) error {
 	return nil
 }
 
-func rootHandler(w http.ResponseWriter, r *http.Request) {
+func RootHandler(w http.ResponseWriter, r *http.Request) {
 	// context propagation
 	_ = database(r.Context(), "darkgrey")
 }
@@ -69,7 +69,7 @@ func database(ctx context.Context, color string) int {
 	return 0
 }
 
-func fibHandler(w http.ResponseWriter, r *http.Request) {
+func FibHandler(w http.ResponseWriter, r *http.Request) {
 	span := trace.SpanFromContext(r.Context())
 	key := "n"
 	if len(r.URL.Query()[key]) != 1 {
