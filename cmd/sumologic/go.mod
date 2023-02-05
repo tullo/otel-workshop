@@ -5,7 +5,7 @@ go 1.19
 replace github.com/tullo/otel-workshop/web/fib => /home/anda/code/otel/workshop/web/fib
 
 require (
-	github.com/tullo/otel-workshop/web/fib v0.0.0-00010101000000-000000000000
+	github.com/tullo/otel-workshop/web/fib v1.0.0
 	go.opentelemetry.io/otel v1.12.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.12.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.12.0
