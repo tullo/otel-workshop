@@ -1,3 +1,3 @@
 # Uptrace
 
-https://github.com/tullo/otel-workshop-uptrace
+Config example https://github.com/tullo/otel-workshop-uptrace
