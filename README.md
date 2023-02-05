@@ -4,5 +4,5 @@ Instrumentation of code for tracing and metrics collection using different expor
 
 ### Docs and sample configs
 
-- [doc](doc/) OpenTelemetry
+- [doc](doc/) OpenTelemetry, backends, vendors
 - [vendors](cmd/)
