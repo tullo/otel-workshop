@@ -4,8 +4,8 @@ go 1.19
 
 require (
 	github.com/gogo/protobuf v1.3.2
-	github.com/jaegertracing/jaeger v1.41.0
-	github.com/opentracing-contrib/go-grpc v0.0.0-20210225150812-73cb765af46e
+	github.com/jaegertracing/jaeger v1.42.0
+	github.com/opentracing-contrib/go-grpc v0.0.0-20230205024533-5ced129e5996
 	github.com/opentracing-contrib/go-stdlib v1.0.0
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/prometheus/client_golang v1.14.0
