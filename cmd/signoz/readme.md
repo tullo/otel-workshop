@@ -1,5 +1,7 @@
 # Signoz
 
+https://github.com/SigNoz/signoz
+
 ## Founders
 
 - Ankit Nayan
