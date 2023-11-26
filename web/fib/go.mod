@@ -1,6 +1,6 @@
 module github.com/tullo/otel-workshop/web/fib
 
-go 1.20
+go 1.21
 
 require (
 	github.com/hashicorp/go-cleanhttp v0.5.2
