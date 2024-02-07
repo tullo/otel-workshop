@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/gogo/protobuf v1.3.2
-	github.com/jaegertracing/jaeger v1.53.0
+	github.com/jaegertracing/jaeger v1.54.0
 	github.com/opentracing-contrib/go-grpc v0.0.0-20210225150812-73cb765af46e
 	github.com/opentracing-contrib/go-stdlib v1.0.0
 	github.com/opentracing/opentracing-go v1.2.0
