@@ -4,7 +4,7 @@ module github.com/tullo/otel-workshop/cmd/signoz/bookstore
 
 go 1.22
 
-toolchain go1.23.2
+toolchain go1.23.3
 
 require (
 	github.com/gin-gonic/gin v1.10.0
