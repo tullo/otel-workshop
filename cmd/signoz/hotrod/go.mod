@@ -8,7 +8,7 @@ require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/jaegertracing/jaeger v1.63.0
 	github.com/opentracing-contrib/go-grpc d08aa2b0b586
-	github.com/opentracing-contrib/go-stdlib v1.0.0
+	github.com/opentracing-contrib/go-stdlib v1.1.0
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/prometheus/client_golang v1.20.5
 	github.com/spf13/cobra v1.8.1
