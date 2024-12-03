@@ -2,7 +2,7 @@ module github.com/tullo/otel-workshop/cmd/signoz/hotrod
 
 go 1.21.0
 
-toolchain go1.23.3
+toolchain go1.23.4
 
 require (
 	github.com/gogo/protobuf v1.3.2
