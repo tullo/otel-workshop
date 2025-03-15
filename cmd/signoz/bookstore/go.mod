@@ -3,7 +3,6 @@ module github.com/tullo/otel-workshop/cmd/signoz/bookstore
 // see => https://github.com/rahmanfadhil/gin-bookstore
 
 go 1.22.0
-
 toolchain go1.24.1
 
 require (
@@ -40,8 +39,8 @@ require (
 	go.opentelemetry.io/otel/metric v1.35.0 // indirect
 	go.opentelemetry.io/otel/trace v1.35.0 // indirect
 	golang.org/x/arch v0.14.0 // indirect
-	golang.org/x/crypto v0.33.0 // indirect
-	golang.org/x/net v0.35.0 // indirect
+	golang.org/x/crypto v0.35.0 // indirect
+	golang.org/x/net v0.36.0 // indirect
 	golang.org/x/sys v0.30.0 // indirect
 	golang.org/x/text v0.22.0 // indirect
 	google.golang.org/protobuf v1.36.5 // indirect
