@@ -1,13 +1,13 @@
 module github.com/tullo/otel-workshop/cmd/signoz/hotrod
 
-go 1.23.7
+go 1.23.8
 
 toolchain go1.24.2
 
 require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/jaegertracing/jaeger v1.67.0
-	github.com/opentracing-contrib/go-grpc v0.1.1
+	github.com/opentracing-contrib/go-grpc v0.1.2
 	github.com/opentracing-contrib/go-stdlib v1.1.0
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/prometheus/client_golang v1.21.1
@@ -33,7 +33,7 @@ require (
 	github.com/spf13/pflag v1.0.6 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
-	golang.org/x/net v0.37.0 // indirect
+	golang.org/x/net v0.38.0 // indirect
 	golang.org/x/sys v0.31.0 // indirect
 	golang.org/x/text v0.23.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250218202821-56aae31c358a // indirect
