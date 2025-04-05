@@ -6,7 +6,7 @@ toolchain go1.24.2
 
 require (
 	github.com/gogo/protobuf v1.3.2
-	github.com/jaegertracing/jaeger v1.67.0
+	github.com/jaegertracing/jaeger v1.68.0
 	github.com/opentracing-contrib/go-grpc v0.1.2
 	github.com/opentracing-contrib/go-stdlib v1.1.0
 	github.com/opentracing/opentracing-go v1.2.0
