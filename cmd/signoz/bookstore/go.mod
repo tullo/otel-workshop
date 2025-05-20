@@ -2,11 +2,12 @@ module github.com/tullo/otel-workshop/cmd/signoz/bookstore
 
 // see => https://github.com/rahmanfadhil/gin-bookstore
 
-go 1.22.0
+go 1.23.0
+
 toolchain go1.24.3
 
 require (
-	github.com/gin-gonic/gin v1.10.0
+	github.com/gin-gonic/gin v1.10.1
 	github.com/jinzhu/gorm v1.9.16
 	go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin v0.60.0
 )
