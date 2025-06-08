@@ -2,7 +2,7 @@ module github.com/tullo/otel-workshop/web/fib
 
 go 1.23.0
 
-toolchain go1.24.3
+toolchain go1.24.4
 
 require (
 	github.com/hashicorp/go-cleanhttp v0.5.2
