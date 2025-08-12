@@ -2,7 +2,7 @@ module github.com/tullo/otel-workshop
 
 go 1.23.0
 
-toolchain go1.24.6
+toolchain go1.25.0
 
 require (
 	go.opentelemetry.io/otel v1.37.0
