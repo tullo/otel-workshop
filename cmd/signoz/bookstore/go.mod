@@ -9,7 +9,7 @@ toolchain go1.25.0
 require (
 	github.com/gin-gonic/gin v1.10.1
 	github.com/jinzhu/gorm v1.9.16
-	go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin v0.62.0
+	go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin v0.63.0
 )
 
 require (
